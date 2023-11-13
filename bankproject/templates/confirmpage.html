@@ -1,0 +1,20 @@
+{% load static %}
+{% include 'navbar.html' %}
+<head>
+    <meta charset="UTF-8">
+    <title>Confirm | Online Banking Website</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" >
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/22fe827ece.js" crossorigin="anonymous"></script>
+    <meta name="description" content="{% block metadescription %}{% endblock %}">
+</head>
+
+<body>
+<h1 style="font-size:50px;color:red;text-align:center;padding:100px;">Your Registration is Successfully Completed</h1>
+<h5 style="text-align:center;"><a href="{% url 'bankapp:index' %}">Click here to home page</a></h5>
+</body>
+<br>
+{% include 'footer.html' %}

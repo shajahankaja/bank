@@ -1,0 +1,40 @@
+{% load static %}
+<html lang="en">
+<header>
+  <right>
+    <a href=""><img src="{% static 'img/banklogo.png' %}" alt="logimg" width="200px" height="200 px"></a>
+  </right>
+</header>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" >
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/22fe827ece.js" crossorigin="anonymous"></script>
+    <meta name="description" content="{% block metadescription %}{% endblock %}">
+</head>
+<body>
+<!-- Image and text -->
+<div>
+{% include 'navbar.html' %}
+<br>
+    <script src="{% static 'js/popper.min.js' %}" ></script>
+    <script src="{% static 'js/bootstrap.min.js' %}" ></script>
+
+</div>
+<div>
+    <img src="{% static 'img/bankbanner.jpg' %}" alt="our products" width="1485" height="400px">
+</div>
+
+{% block body %}
+{% endblock %}
+
+<div>
+  {% include 'footer.html' %}
+</div>
+</body>
+</html>

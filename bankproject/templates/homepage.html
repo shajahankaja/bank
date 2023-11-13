@@ -1,0 +1,48 @@
+{% load static %}
+{% include 'navbar.html' %}
+<br>
+<head>
+    <meta charset="UTF-8">
+    <title>About | Online Banking Website</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" >
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/22fe827ece.js" crossorigin="anonymous"></script>
+    <meta name="description" content="{% block metadescription %}{% endblock %}">
+</head>
+
+<body>
+<h1 style="font-size:50px;color:red;text-align:center;padding:50px;">Welcome to our About page</h1>
+<p style="text-align:center">Our bank start since 1880,Banking in its modern sense evolved in the fourteenth century in the prosperous cities of Renaissance Italy but in many ways functioned as a continuation of ideas and concepts of credit and lending that had their roots in the ancient world. In the history of banking, a number of banking dynasties – notably, the Medicis, the Fuggers, the Welsers, the Berenbergs, and the Rothschilds – have played a central role over many centuries. The oldest existing retail bank is Banca Monte dei Paschi di Siena (founded in 1472), while the oldest existing merchant bank is Berenberg Bank (founded in 1590)<br><a href="{% url 'bankapp:index' %}" >-- Click Here --</a></p>
+
+<div class="card-group">
+  <div class="card">
+    <img class="card-img-top" src="{% static 'img/home-loan.jpg' %}" alt="Card image cap" width="400px" height="400 px">
+    <div class="card-body">
+      <h3 class="card-title" style="text-align:center;color:red">Home Loan</h3>
+      <p class="card-text">In the home loan, a loan is the transfer of money by one party to another with an agreement to pay it back. The recipient, or borrower, incurs a debt and is usually required to pay interest for the use of the money. The document evidencing the debt (e.g., a promissory note) will normally specify, among other things, the principal amount of money borrowed, the interest rate the lender is charging, and the date of repayment. A loan entails the reallocation of the subject asset(s) for a period of time, between the lender and the borrower.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="{% static 'img/eloan.jpg' %}" alt="Card image cap" width="400px" height="400 px">
+    <div class="card-body">
+      <h3 class="card-title" style="text-align:center;color:red">Education Loan</h3>
+      <p class="card-text">In the education loan, a loan is the transfer of money by one party to another with an agreement to pay it back. The recipient, or borrower, incurs a debt and is usually required to pay interest for the use of the money. The document evidencing the debt (e.g., a promissory note) will normally specify, among other things, the principal amount of money borrowed, the interest rate the lender is charging, and the date of repayment. A loan entails the reallocation of the subject asset(s) for a period of time, between the lender and the borrower.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="{% static 'img/carloan.jpg' %}" alt="Card image cap" width="400px" height="400 px">
+    <div class="card-body">
+      <h3 class="card-title" style="text-align:center;color:red">Car Loan</h3>
+      <p class="card-text">In the car loan, a loan is the transfer of money by one party to another with an agreement to pay it back. The recipient, or borrower, incurs a debt and is usually required to pay interest for the use of the money. The document evidencing the debt (e.g., a promissory note) will normally specify, among other things, the principal amount of money borrowed, the interest rate the lender is charging, and the date of repayment. A loan entails the reallocation of the subject asset(s) for a period of time, between the lender and the borrower.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
+</body>
+<br>
+{% include 'footer.html' %}

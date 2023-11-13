@@ -1,0 +1,15 @@
+body{
+background-color:white;
+}
+.nav-item{
+    letter-spacing : .2em;
+    font-size : 20px;
+    text-transform : uppercase;
+
+}
+.dropdown-item{
+    letter-spacing : .2em;
+    font-size : 16px;
+    text-transform : uppercase;
+
+}

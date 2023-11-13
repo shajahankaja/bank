@@ -1,0 +1,23 @@
+{% load static %}
+{% include 'navbar.html' %}
+<head>
+    <meta charset="UTF-8">
+    <title>New page</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" >
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/22fe827ece.js" crossorigin="anonymous"></script>
+    <meta name="description" content="{% block metadescription %}{% endblock %}">
+</head>
+
+<h1 style="text-align:center"> Welcome to New Bank Pvt Ltd</h1>
+<div><h3 style="color:red">Are you sure to register</h3>
+<a class="btn btn-Danger" href="{% url 'bankapp:form' %}" style="color:white;font-size:30px;"><b>Yes</b></a>
+    </div>
+
+<br>
+<br>
+<br>
+{% include 'footer.html' %}

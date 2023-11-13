@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+    <meta charset="UTF-8">
+    <title>Signup | Online Banking Website</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" >
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/22fe827ece.js" crossorigin="anonymous"></script>
+    <meta name="description" content="{% block metadescription %}{% endblock %}">
+</head>
+
+    <body onload="load();">
+        <div id="header">
+            <h1>Online Banking Website</h1>
+            <a href="{% url 'bankapp:index' %}"><img src="{% static 'img/banklogo.png' %}" width="100" height="70 px" alt="Online Banking Website" title="Online Banking Website"></a>
+        </div>
+
+        {% include 'navbar.html' %}
+
+        <form  action="login" method="post" style="text-align:center;color:red;">
+                {% csrf_token %}
+            <fieldset>
+                <legend>Register</legend>
+                <label>User Name   : </label><input type="text" id="name" placeholder="Enter your User Name "><br><br>
+                <label>Password   : </label><input type="password" id="password" placeholder="Password" onblur="return validPassword();"><br><br>
+                <label>Confirm Password   : </label><input type="password" id="confirmPassword" placeholder="Confirm Password"><br><br>
+                <p><input type="checkbox"><span>I agree to the <a
+                            href="https://en.wikipedia.org/wiki/Bank">Term and Conditions</a></span></p>
+                <a class="btn btn-danger" href="{% url 'bankapp:login' %}" style="color:white"><b>signup</b></a>
+            </fieldset>
+        </form>
+    </body>
+
+</html>
